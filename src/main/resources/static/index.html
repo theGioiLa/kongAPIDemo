@@ -3,9 +3,24 @@
 <head>
     <title>Kong API Demo</title>
 </head>
- <body>
-   <h1>Kong API Landing Page</h1>
-   <a href="/api">API</a>
- </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<body>
+    <h1>Kong API Landing Page</h1>
+    <a href="/api">API</a>
+</body>
+
+
+<script>
+    $(document).ready(function() {
+        $.ajax({
+            url: "http://localhost:9000/upload"
+        }).then(function(data, status, jqxhr) {
+           $('.greeting-id').append(data.id);
+           $('.greeting-content').append(data.content);
+           console.log(jqxhr);
+        });
+    });
+</script>
+
 </html>
 

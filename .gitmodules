@@ -1,0 +1,3 @@
+[submodule "plugins/custom-kong-oidc"]
+	path = plugins/custom-kong-oidc
+	url = https://github.com/theGioiLa/custom-kong-oidc.git
